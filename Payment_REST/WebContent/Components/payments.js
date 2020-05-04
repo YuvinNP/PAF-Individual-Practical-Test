@@ -164,6 +164,7 @@ function onPaymentDeleteComplete(response, status) {
 	} else if (status == "error") { 
 		$("#alertError").text("Error while deleting."); 
 		$("#alertError").show(); 
+		
 	} else { 
 		$("#alertError").text("Unknown error while deleting.."); 
 		$("#alertError").show(); 
