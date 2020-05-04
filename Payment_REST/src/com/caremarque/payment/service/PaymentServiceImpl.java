@@ -431,6 +431,8 @@ public class PaymentServiceImpl implements IPaymentService {
 			preparedstatement.execute();
 
 			output = "Payment ID: " + paymentid + " was updated";
+			String newItems = getPayments();
+			output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
 
 		} catch (Exception e) {
 			log.log(Level.SEVERE, e.getMessage());
