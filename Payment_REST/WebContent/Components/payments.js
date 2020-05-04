@@ -130,6 +130,8 @@ function onPaymentSaveComplete(response, status) {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
 			$("#divPaymentsGrid").html(resultSet.data);
+			$("#hidPaymentIDSave").val("");
+			$("#formItem")[0].reset();
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
@@ -146,8 +148,7 @@ function onPaymentSaveComplete(response, status) {
 			$("#alertError").show();
 		}
 	
-		$("#hidPaymentIDSave").val("");
-		$("#formItem")[0].reset();
+		
 
 }
 

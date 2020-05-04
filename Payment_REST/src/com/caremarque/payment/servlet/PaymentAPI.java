@@ -99,7 +99,7 @@ public class PaymentAPI extends HttpServlet {
 
 
 		String output = paymentServiceImpl.updatePayment(paras.get("hidPaymentIDSave2").toString(),
-				paras.get("telephone2").toString(), paras.get("email2").toString());
+				paras.get("telephone2").toString(), paras.get("email2").toString().replace("%40", "@"));
 //		
 		response.getWriter().write(output);
 	}
