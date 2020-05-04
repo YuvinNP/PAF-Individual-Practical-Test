@@ -95,11 +95,11 @@ public class PaymentAPI extends HttpServlet {
 		Map paras = getParasMap(request);
 		System.out.println("paymeint id: " + paras.get("hidPaymentIDSave2").toString());
 		System.out.println("paymeint id: " + paras.get("telephone2").toString());
-		System.out.println("paymeint id: " + paras.get("emai2l").toString());
+		System.out.println("paymeint id: " + paras.get("email2").toString());
 
 
 		String output = paymentServiceImpl.updatePayment(paras.get("hidPaymentIDSave2").toString(),
-				paras.get("telephone").toString(), paras.get("email2").toString());
+				paras.get("telephone2").toString(), paras.get("email2").toString());
 //		
 		response.getWriter().write(output);
 	}
@@ -112,7 +112,7 @@ public class PaymentAPI extends HttpServlet {
 		
 		Map paras = getParasMap(request);
 		
-		String output = paymentServiceImpl.cancelPayment(paras.get("paymentId").toString());
+		String output = paymentServiceImpl.cancelPayment(paras.get("paymentID").toString());
 		System.out.println(paras.get("paymentID").toString());
 		response.getWriter().write(output);
 	}

@@ -111,6 +111,7 @@ public class PaymentServiceImpl implements IPaymentService {
 
 			} else {
 				output = "Authentication ERROR!!!";
+				output = "{\"status\":\"AuthError\", \"data\": \"Authentication Error.\"}";
 				System.out.println("Authentication ERROR!!!");
 			}
 
@@ -343,14 +344,15 @@ public class PaymentServiceImpl implements IPaymentService {
 
 			DateFormat inputFormatter = new SimpleDateFormat("dd/MM/yyyy");
 
-			output = "<table class=\" table table-sm table-responsive\" style=\"font-family: 'Roboto', sans-serif\" > "
-					+ "<tr>" + "<th scope=\"col\">Payment Id</th> " + "<th scope=\"col\">Patient Id</th> "
-					+ "<th scope=\"col\">Patient Name</th> " + "<th scope=\"col\">Appointment Id</th> "
-					+ "<th scope=\"col\">Doctor Id</th> " + "<th scope=\"col\">Hospital Id</th> "
-					+ "<th scope=\"col\">Payment Date</th> " + "<th scope=\"col\">Payment Time</th> "
-					+ "<th scope=\"col\">Doctor Charges</th> " + "<th scope=\"col\">Hospital Charges</th> "
-					+ "<th scope=\"col\">Total Amount</th> " + "<th scope=\"col\">Telephone No</th> "
-					+ "<th scope=\"col\">Email</th> " + "<th scope=\"col\">Payment Status</th>" + "</tr>";
+			output = "<table class=' table table-sm table-responsive' style='font-family: 'Roboto', sans-serif;' > "
+					+ "<tr>" + "<th scope='col'>Payment Id</th> " + "<th scope='col'>Patient Id</th> "
+					+ "<th scope='col'>Patient Name</th> " + "<th scope='col'>Appointment Id</th> "
+					+ "<th scope='col'>Doctor Id</th> " + "<th scope='col'>Hospital Id</th> "
+					+ "<th scope='col'>Paymen tDate</th> " + "<th scope='col'>Payment Time</th> "
+					+ "<th scope='col'>Doctor Charges</th> " + "<th scope='col'>Hospital Charges</th> "
+					+ "<th scope='col'>Total Amount</th> " + "<th scope='col'>Telephone No</th> "
+					+ "<th scope='col'>Email</th> " + "<th scope='col'>Payment Status</th>"
+					+ "</tr>";
 
 			while (resultset.next()) {
 				Payment payment = new Payment();
@@ -447,6 +449,7 @@ public class PaymentServiceImpl implements IPaymentService {
 					connecton.close();
 				}
 			} catch (SQLException e) {
+				output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
 				log.log(Level.SEVERE, e.getMessage());
 			}
 		}
@@ -475,7 +478,8 @@ public class PaymentServiceImpl implements IPaymentService {
 			preparedstatement.execute();
 
 			output = paymentId + " status changed to cancel!";
-
+			String newItems = getPayments();
+			output = "{\"status\":\"success\", \"data\": \"" + newItems + "\"}";
 		} catch (Exception e) {
 			log.log(Level.SEVERE, e.getMessage());
 
@@ -488,6 +492,7 @@ public class PaymentServiceImpl implements IPaymentService {
 					connecton.close();
 				}
 			} catch (SQLException e) {
+				output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
 				log.log(Level.SEVERE, e.getMessage());
 			}
 		}
