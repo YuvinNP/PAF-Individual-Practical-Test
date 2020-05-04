@@ -1,5 +1,6 @@
 # PAF-Individual-Practical-Test
 
+## Payment UI
 
 To create payment, Click On "CREATE PAYMENTS" tab then fill the form and Save
 
