@@ -35,7 +35,7 @@
 				<form id="formItem" name="formItem" style="padding: 10px;">
 					<div class="form-row">
 						<div class="form-group col-md-3">
-							<label for="inputState">Appointment ID:</label> <select
+							<label for="inputState">Appointment ID:<span style="color: red;">*</span></label> <select
 								id="appointmentId" name="appointmentId" class="form-control">
 								<option value="" selected>Choose...</option>
 								<option value="APP001">APP001</option>
@@ -44,7 +44,7 @@
 							</select>
 						</div>
 						<div class="form-group col-md-3">
-							<label for="inputState">Patient ID:</label> <select
+							<label for="inputState">Patient ID:<span style="color: red;">*</span></label> <select
 								id="patientId" name="patientId" class="form-control">
 								<option value="" selected>Choose...</option>
 								<option value="P101">P101</option>
@@ -53,7 +53,7 @@
 							</select>
 						</div>
 						<div class="form-group col-md-3">
-							<label for="inputState">Doctor ID:</label> <select id="doctorId"
+							<label for="inputState">Doctor ID:<span style="color: red;">*</span></label> <select id="doctorId"
 								name="doctorId" class="form-control">
 								<option value="" selected>Choose...</option>
 								<option value="D202">D202</option>
@@ -62,7 +62,7 @@
 							</select>
 						</div>
 						<div class="form-group col-md-3">
-							<label for="inputState">Hospital ID:</label> <select id="hospitalId"
+							<label for="inputState">Hospital ID:<span style="color: red;">*</span></label> <select id="hospitalId"
 								name="hospitalId" class="form-control">
 								<option value="" selected>Choose...</option>
 								<option value="H202">H202</option>
@@ -72,23 +72,19 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputAddress">Patient Name:</label> <input type="text"
+						<label for="inputAddress">Patient Name:<span style="color: red;">*</span></label> <input type="text"
 							class="form-control" id="patientName" name="patientName"
 							placeholder="Name">
 					</div>
 					<div class="form-row">
-						<div class="form-group col-md-4">
-							<label for="inputCity">Card No:</label> <input type="text"
+						<div class="form-group col-md-6">
+							<label for="inputCity">Card No:<span style="color: red;">*</span></label> <input type="text"
 								class="form-control" id="cardNo" name="cardNo"
 								placeholder="XXXX-XXXX-XXXX-XXXX">
 						</div>
-						<div class="form-group col-md-4">
-							<label for="inputCity">Passcode:</label> <input type="text"
+						<div class="form-group col-md-6">
+							<label for="inputCity">Passcode:<span style="color: red;">*</span></label> <input type="text"
 								class="form-control" id="passCode" name="passCode" placeholder="XXX">
-						</div>
-						<div class="form-group col-md-4">
-							<label for="inputCity">EXP Date:</label> <input type="text"
-								class="form-control" id="expDate" name="expDate" placeholder="12/22">
 						</div>
 					</div>
 					
@@ -109,12 +105,12 @@
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="inputCity">Email:</label> <input type="text"
+							<label for="inputCity">Email:<span style="color: red;">*</span></label> <input type="text"
 								class="form-control" id="email" name="email"
 								placeholder="sampleuser@email.com">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="inputCity">Telephone:</label> <input type="text"
+							<label for="inputCity">Telephone:<span style="color: red;">*</span></label> <input type="text"
 								class="form-control" id="telephone" name="telephone" placeholder="07XXXXXXXX">
 						</div>
 

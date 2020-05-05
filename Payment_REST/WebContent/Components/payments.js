@@ -120,9 +120,6 @@ function validateForm() {
 	if ($("#passCode").val().trim() == "") {
 		return "Insert Pass Code";
 	}
-	if ($("#expDate").val().trim() == "") {
-		return "Insert Exp Date";
-	}
 	if ($("#email").val().trim() == ""){
 		return "Insert Email";
 	}
