@@ -19,5 +19,6 @@ To Update a payment, Click On "UPDATE PAYMENTS" tab then click on the relavent u
 ![Payment UI Guide](https://github.com/YuvinNP/PAF-Individual-Practical-Test/blob/master/images/Screenshot%20(116).png)
 
 ## Payment UI Demo
+I have currently put some hard coded values to doctor, hospital and total charges. Those data should be taken from relevant services.
 
 ![Payment UI Guide](https://github.com/YuvinNP/PAF-Individual-Practical-Test/blob/master/images/payment_demo.gif)
