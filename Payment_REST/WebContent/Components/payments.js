@@ -55,6 +55,13 @@ $(document).on("click", "#btnSave2", function(event) {
 	$("#alertError").text("");
 	$("#alertError").hide();
 
+	var status = validateForm2();
+	if (status != true) {
+		$("#alertError").text(status);
+		$("#alertError").show();
+		return;
+	}
+	
 	$.ajax({
 		url : "PaymentAPI",
 		type : "PUT",
@@ -88,6 +95,10 @@ function validateForm() {
 
 	 var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 	 var emailval = $("#email").val();
+	 var telNoVal = $("#telephone").val();
+	 var telNoReg = /^\d{10}$/;
+	 
+	 
 	if ($("#appointmentId").val() == "") {
 		return "Select Appointment ID";
 	}
@@ -117,6 +128,29 @@ function validateForm() {
 	}
 	if (!emailReg.test(emailval)) {
 		return "Insert Valid Email";
+	}
+	if(!telNoReg.test(telNoVal)){
+		return "Insert Valid Telephone No";
+	}
+	
+	return true;
+}
+
+function validateForm2() {
+
+	 var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	 var emailval = $("#email2").val();
+	 var telNoVal = $("#telephone2").val();
+	 var telNoReg = /^\d{10}$/;
+	
+	if ($("#email2").val().trim() == ""){
+		return "Insert Email";
+	}
+	if (!emailReg.test(emailval)) {
+		return "Insert Valid Email";
+	}
+	if(!telNoReg.test(telNoVal)){
+		return "Insert Valid Telephone No";
 	}
 	return true;
 }
