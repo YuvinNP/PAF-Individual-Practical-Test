@@ -143,6 +143,9 @@ function validateForm2() {
 	if ($("#email2").val().trim() == ""){
 		return "Insert Email";
 	}
+	if ($("#telephone2").val().trim() == ""){
+		return "Insert Telephone No";
+	}
 	if (!emailReg.test(emailval)) {
 		return "Insert Valid Email";
 	}
