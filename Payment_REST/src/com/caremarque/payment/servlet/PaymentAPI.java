@@ -93,10 +93,7 @@ public class PaymentAPI extends HttpServlet {
 		PaymentServiceImpl paymentServiceImpl = new PaymentServiceImpl();
 		
 		Map paras = getParasMap(request);
-		System.out.println("paymeint id: " + paras.get("hidPaymentIDSave2").toString());
-		System.out.println("paymeint id: " + paras.get("telephone2").toString());
-		System.out.println("paymeint id: " + paras.get("email2").toString());
-
+	
 
 		String output = paymentServiceImpl.updatePayment(paras.get("hidPaymentIDSave2").toString(),
 				paras.get("telephone2").toString(), paras.get("email2").toString().replace("%40", "@"));
