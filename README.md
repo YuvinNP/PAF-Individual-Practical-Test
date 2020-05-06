@@ -20,6 +20,6 @@ To Update a payment, Click On "UPDATE PAYMENTS" tab then click on the relavent u
 
 ## Payment UI Demo
 I have currently put some hard coded values to doctor, hospital and total charges. Those data should be taken from relevant services.
-at the start, it is shown an success message, because I started this recording soon after add a new value. When the page is refereshed all those success,error validation messages are dissapeared.(Here I didn't refershed the page before add a new payment)
+at the start, it is shown an success message, because I started this recording soon after add a new value. When the page is refereshed all those success,error validation messages are dissapeared.(Here I didn't refreshed the page before add a new payment)
 This is a simple demo. More validations have been done there.
 ![Payment UI Guide](https://github.com/YuvinNP/PAF-Individual-Practical-Test/blob/master/images/payment_demo.gif)
